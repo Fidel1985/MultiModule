@@ -1,2 +1,0 @@
-com.cg.fidel.DatabaseBundleConfig
-com.cg.fidel.Person

@@ -8,13 +8,13 @@
         <servlet-name>installer</servlet-name>
         <servlet-class>com.cg.helix.web.DispatchingServlet</servlet-class>
         <init-param>
-        <param-name>db.autoSetup</param-name>
-        <param-value>true</param-value>
+            <param-name>db.autoSetup</param-name>
+            <param-value>true</param-value>
         </init-param>
-<!--        <init-param>
+        <init-param>
             <param-name>mib.autoSetup</param-name>
             <param-value>true</param-value>
-        </init-param>-->
+        </init-param>
         <init-param>
             <param-name>db.defaultAlias</param-name>
             <param-value>/multiModuleApp</param-value>

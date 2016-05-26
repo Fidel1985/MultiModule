@@ -14,7 +14,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-
+        <!-- database driver (and in memory database)-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
     </dependencies>
 
 

@@ -8,7 +8,7 @@ public class DatabaseBundleConfig extends BaseDatabaseBundleConfiguration {
 
     @Override
     public String description() {
-        return "Bundle config for the MultiModule application";
+        return "Bundle META-INF for the MultiModule application";
     }
 
 }
