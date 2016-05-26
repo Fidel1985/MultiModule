@@ -10,27 +10,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>impl</artifactId>
+    <artifactId>database</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.cg.fidel</groupId>
-            <artifactId>api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <!-- Helix -->
-        <!-- @Transactional, @ReadOnly -->
-        <dependency>
-            <groupId>com.cg.helix</groupId>
-            <artifactId>helix-service-persistence</artifactId>
-        </dependency>
-
     </dependencies>
-
-
 
 
 </project>
