@@ -18,6 +18,7 @@ hs_err_pid*
 /.externalToolBuilders/
 /.settings/
 /target/
+/*/target/
 /doc/
 /test-output/
 /.classpath
