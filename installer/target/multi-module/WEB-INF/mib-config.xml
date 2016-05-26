@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://www.cgm.com/2011/helix/configuration"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.cgm.com/2011/helix/configuration http://www.cgm.com/2011/helix/configuration.xsd">
+
+    <IntegratorBus name="dbApp">
+        <Persistence>
+            <!-- This attribute is responsible for auto-upgrading the database on server startup. -->
+            <!-- If you prefer to upgrade the database manually on the demand set the mode value to 'NONE' -->
+            <SchemaUpdate mode="AUTO_UPGRADE"/>
+        </Persistence>
+    </IntegratorBus>
+
+</Configuration> 
+ 
