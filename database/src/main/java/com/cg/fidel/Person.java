@@ -35,6 +35,16 @@ public class Person {
             join = @RelationJoin(srcElement = "id", targetElement = "idPerson"))
     private List<Address> address;
 
+    Person(){
+
+    }
+
+    Person(String id, String firstName, int age){
+        this.id = id;
+        this.firstName = firstName;
+        this.age = age;
+    }
+
     public String getId() {
         return id;
     }

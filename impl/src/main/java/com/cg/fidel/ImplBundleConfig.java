@@ -16,10 +16,10 @@ public class ImplBundleConfig extends BaseImplementationBundleConfiguration{
 /*    @Override
     public Class<? extends BaseApiBundleConfiguration>[] implementBundles() {
         return new Class[]{ApiBundleConfig.class};
-    }
+    }*/
 
     @Override
     public Class<? extends BaseBundleConfiguration>[] dependsOnBundles() {
         return new Class[]{DatabaseBundleConfig.class};
-    }*/
+    }
 }
