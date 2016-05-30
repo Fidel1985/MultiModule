@@ -12,19 +12,19 @@ import com.cg.helix.persistence.transaction.annotation.Transactional;
 @Transactional
 @SingletonScope
 @Component
-public class PersonServiceImpl implements PersonService {
+public class AddressServiceImpl implements AddressService {
 
     private final PersistenceService persistenceService;
 
     @InjectConstructor
-    public PersonServiceImpl(PersistenceService persistenceService) {
+    public AddressServiceImpl(PersistenceService persistenceService) {
         this.persistenceService = persistenceService;
     }
 
     @ReadOnly
     @Override
-    public List<Person> findAll() {
-        return persistenceService.findAll().with("address").list(Person.class);
+    public List<Address> findAll() {
+        return persistenceService.findAll().with("person").list(Address.class);
     }
 
 }

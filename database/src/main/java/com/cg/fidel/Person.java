@@ -1,25 +1,39 @@
 package com.cg.fidel;
 
+import java.util.List;
+import java.util.Set;
+
 import com.cg.helix.persistence.metadata.annotation.BusinessObject;
+import com.cg.helix.persistence.metadata.annotation.BusinessObjectElement;
+import com.cg.helix.persistence.metadata.annotation.CardinalityType;
 import com.cg.helix.persistence.metadata.annotation.DatabaseTable;
+import com.cg.helix.persistence.metadata.annotation.Relation;
+import com.cg.helix.persistence.metadata.annotation.RelationJoin;
+import com.cg.helix.persistence.metadata.annotation.TableIndex;
 import com.cg.helix.schemadictionary.annotation.ComplexType;
 import com.cg.helix.schemadictionary.annotation.Element;
 import com.cg.helix.schemadictionary.annotation.Id;
 
-/**
- * @author Hans Kohlreiter, COREFT
- */
 @ComplexType
-@DatabaseTable
+@DatabaseTable(
+        indexes = @TableIndex(elementNames = {"firstName", "age"})
+)
 @BusinessObject
 public class Person {
 
     @Id
     private String id;
+
     @Element(length = 30)
     private String firstName;
+
     @Element
     private int age;
+
+    @Relation(
+            cardinality = CardinalityType.ONE_TO_MANY,
+            join = @RelationJoin(srcElement = "id", targetElement = "idPerson"))
+    private List<Address> address;
 
     public String getId() {
         return id;
@@ -43,5 +57,13 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void setAddress(List<Address> address) {
+        this.address = address;
+    }
+
+    public List<Address> getAddress() {
+        return address;
     }
 }
